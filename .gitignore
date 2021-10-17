@@ -1,0 +1,9 @@
+## node modules
+node_modules/**
+
+## output folders
+dist
+.dist
+
+## env files
+.env
