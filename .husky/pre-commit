@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# npm test
+npx lint-staged
+
+# run chmod on pre commit file
+# chmod +x ./.husky/pre-commit
