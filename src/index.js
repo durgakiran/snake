@@ -1,10 +1,6 @@
-import './css/common.css';
+// import navigate from "./scripts/navigation";
 
-export class Index {
-    printSomething() {
-        console.log('I am printing');
-    }
+export default function printSomething() {
+  // console.log('print something');
 }
-
-const index = new Index();
-index.printSomething();
+printSomething();
