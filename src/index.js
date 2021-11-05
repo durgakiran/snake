@@ -1,10 +1,14 @@
 import './css/common.css';
+import navigate from './scripts/navigation';
 
-export class Index {
-    printSomething() {
-        console.log('I am printing');
-    }
+export default function navigateToGame() {
+    navigate('game.html');
 }
 
-const index = new Index();
-index.printSomething();
+const playButton = document.getElementById('play');
+
+playButton.addEventListener('click', navigateToGame);
+
+window.onunload = () => {
+    playButton.removeEventListener('click', navigateToGame);
+};
