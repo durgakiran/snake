@@ -1,0 +1,8 @@
+- When a new player joins, they'll be randomly assigned a snake with a theme/color.
+- Each player can move their snake left or right using arrow keys or mouse, space for accelaration
+- Snake grows by eating eggs and snake attracts eggs nearby to their face
+- If a snake hits another snake -> snake which hits the other snake dies
+- Head on collision -> both snakes die
+- Snake hits border -> dies
+- dead snake becomes eggs
+- acceleration decreasses snake sizes and creates more eggs on its path
