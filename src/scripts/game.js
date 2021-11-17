@@ -8,8 +8,10 @@ import Controls from './controls';
 import Snake from './snake';
 
 export default class Game {
-    constructor(snakeName) {
-        this.snakeName = snakeName;
+    constructor(snakes, width, height) {
+        this.snakes = snakes;
+        this.modelWidth = width;
+        this.modelHeight = height;
         this.controls = new Controls();
     }
 
@@ -23,6 +25,8 @@ export default class Game {
     async draw() {
         this.cameraWidth = window.innerWidth;
         this.cameraHeight = window.innerHeight;
+        this.ratioX = this.cameraWidth / this.modelWidth;
+        this.ratioY = this.cameraHeight / this.modelHeight;
         const containerNode = document.getElementById(GAME_CONTAINER_ID);
         this.area = new Area(this.cameraWidth, this.cameraHeight, containerNode);
         await this.area.drawArea();
@@ -65,8 +69,3 @@ export default class Game {
          */
     }
 }
-
-const game = new Game('kiran');
-game.draw().then(() => {
-    game.play();
-});

@@ -1,4 +1,10 @@
-import { CANVAS_NOT_SUPPORTED, GAME_ID } from './const';
+import {
+    BACKGROUND_IMAGE_HEIGHT,
+    BACKGROUND_IMAGE_WIDTH,
+    CANVAS_NOT_SUPPORTED,
+    GAME_BOARD_HEIGHT,
+    GAME_BOARD_WIDTH, GAME_ID,
+} from './const';
 import tile from '../assets/tile.png';
 
 /**
@@ -15,6 +21,19 @@ export default class Area {
         this.width = width;
         this.height = height;
         this.element = element;
+    }
+
+    generateAreaMatrix() {
+        const rows = (this.height + GAME_BOARD_HEIGHT) / BACKGROUND_IMAGE_HEIGHT;
+        const columns = (this.width + GAME_BOARD_WIDTH) / BACKGROUND_IMAGE_WIDTH;
+        this.areaMatrix = [];
+        for (let i = 0; i < rows; i += 1) {
+            const currentRow = [];
+            for (let j = 0; j < columns; j += 1) {
+                this.currentRow.push(1);
+            }
+            this.areaMatrix.push(currentRow);
+        }
     }
 
     async drawArea() {

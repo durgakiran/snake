@@ -1,16 +1,16 @@
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
     purge: ['./src/**/*.{js,jsx,ts,tsx}', './src/pages/index.html'],
     darkMode: false, // or 'media' or 'class'
     theme: {
         fontFamily: {
-            'sans': ['Bubblegum Sans', 'cursive']
+            sans: ['Bubblegum Sans', 'cursive'],
         },
         extend: {
             borderWidth: {
-                "20": "20px",
-                "xl": "4rem"
+                20: '20px',
+                xl: '4rem',
             },
             colors: {
                 white: '#ffffff',
@@ -25,7 +25,7 @@ module.exports = {
                 burntSienna: '#EF7350',
                 flaxShade: '#EFD887',
                 springRain60: '#9fd0b0',
-            }
+            },
         },
     },
     variants: {
@@ -34,7 +34,7 @@ module.exports = {
         },
     },
     plugins: [
-        plugin(function ({ addComponents }) {
+        plugin(({ addComponents }) => {
             const buttons = {
                 '.btn': {
                     padding: '.5rem 1rem',
@@ -45,19 +45,19 @@ module.exports = {
                     backgroundColor: '#EED688',
                     color: '#000',
                     '&:hover': {
-                        backgroundColor: '#EF7350'
+                        backgroundColor: '#EF7350',
                     },
                 },
                 '.btn-red': {
                     backgroundColor: '#e3342f',
                     color: '#fff',
                     '&:hover': {
-                        backgroundColor: '#cc1f1a'
+                        backgroundColor: '#cc1f1a',
                     },
                 },
-            }
+            };
 
-            addComponents(buttons)
-        })
+            addComponents(buttons);
+        }),
     ],
-}
+};

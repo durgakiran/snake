@@ -36,12 +36,12 @@ module.exports = {
     },
     entry: {
         index: './src/index.js',
-        game: './src/scripts/game.js',
+        game: './src/scripts/network.js',
     },
     devtool: 'inline-source-map',
     devServer: {
         static: './dist',
-        port: 3000,
+        port: 4201,
     },
     plugins: [
         new HtmlWebpackPlugin({

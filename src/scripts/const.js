@@ -9,6 +9,8 @@ export const CANVAS_NOT_SUPPORTED = 'Canvas not supported';
 // game variables
 export const GAME_BOARD_WIDTH = 4000;
 export const GAME_BOARD_HEIGHT = 4000;
+export const BACKGROUND_IMAGE_WIDTH = 363;
+export const BACKGROUND_IMAGE_HEIGHT = 363;
 export const SNAKE_BASE_ROTATE_ANGLE = 45;
 export const SNAKE_BASE_SPEED_X = 2;
 export const SNAKE_BASE_SPEED_Y = 2;
